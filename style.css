@@ -14,11 +14,18 @@ body {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
 }
+.top {
+  position: relative;
+  overflow: hidden;
+}
 
 .header {
   background-color: #222;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding-top: 18px;
   padding-bottom: 19px;
 }
@@ -26,42 +33,48 @@ body {
 .header__search {
   display: flex;
   gap: 41px;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
 }
 
 .top__content {
   background-color: #f1e4e6;
   display: flex;
-  max-height: 764px;
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px)
 }
 
 .top__img {
-  width: 100%;
-  max-width: 800px;
+  width: 50%;
 }
 
 .top__info {
-  padding-top: 290px;
   padding-left: 63px;
-  max-width: 800px;
 }
 .top__text {
   border-left: 12px solid #f16d7f;
-  padding-left: 12px;
+  padding-left: 16px;
+  margin-top: 48%;
 }
 
 .title {
+  font-style: normal;
   color: #222;
   font-size: 48px;
   font-weight: 900;
+  line-height: 58px;
 }
 
 .subtitle {
   color: #222;
   font-size: 32px;
   font-weight: 700;
-  line-height: normal;
+  font-style: normal;
+  line-height: 38px;
 }
 
 h2 > span {
@@ -71,6 +84,10 @@ h2 > span {
 .offer {
   margin-top: 65px;
   margin-bottom: 96px;
+}
+
+.content {
+  padding-left: 64px;
 }
 
 .offer__items {
@@ -209,3 +226,48 @@ h2 > span {
   background-color: #fff;
 }
 
+@media (max-width: 1024px){
+  .center {
+    padding-left: calc(50% - 376px);
+    padding-right: calc(50% - 376px);
+  }
+
+  .brand__img {
+    max-width: 384px;
+  }
+
+  .top__info {
+    padding-left: 39px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: normal;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .content {
+    padding-left: 16px;
+  }
+  .offer__items {
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    grid-template-rows: 167px 116px;
+    gap: 19px;
+  }
+  .product__title {
+    margin-bottom: 3px;
+  }
+
+  .products__cards {
+    margin-top: 72px;
+    margin-bottom: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+}
